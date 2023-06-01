@@ -10,9 +10,9 @@ import org.springframework.context.annotation.Bean
 import java.util.*
 
 @SpringBootApplication
-class Application {
+open class Application {
     @Bean
-    fun commandLineRunner(ctx: ApplicationContext): CommandLineRunner {
+    open fun commandLineRunner(ctx: ApplicationContext): CommandLineRunner {
         return CommandLineRunner { args: Array<String> ->
             println("Let's inspect the beans provided by Spring Boot:")
             val beanNames = ctx.beanDefinitionNames
@@ -24,7 +24,7 @@ class Application {
     }
 
     @Bean
-    fun httpTraceRepository(): HttpTraceRepository {
+    open fun httpTraceRepository(): HttpTraceRepository {
         return InMemoryHttpTraceRepository()
     }
 
