@@ -11,11 +11,6 @@ import java.util.*
 
 @SpringBootApplication
 class Application {
-
-    fun main(args: Array<String>) {
-        runApplication<Application>(*args)
-    }
-
     @Bean
     fun commandLineRunner(ctx: ApplicationContext): CommandLineRunner {
         return CommandLineRunner { args: Array<String> ->
@@ -31,5 +26,12 @@ class Application {
     @Bean
     fun httpTraceRepository(): HttpTraceRepository {
         return InMemoryHttpTraceRepository()
+    }
+
+    companion object {
+        @JvmStatic
+        fun main(args: Array<String>) {
+            runApplication<Application>(*args)
+        }
     }
 }
