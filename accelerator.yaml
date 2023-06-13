@@ -1,0 +1,7 @@
+accelerator:
+  displayName: SpringBoot Kotlin Accelerator
+  description: Contains a basic SpringBoot app converted from a Java SprinBoot application
+  iconUrl: https://kotlinlang.org/assets/images/favicon.ico?&v=551939ffa02d7c28c0be13a9d2b33a74
+  tags:
+  - simple
+  - getting-started
