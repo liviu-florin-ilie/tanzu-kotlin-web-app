@@ -3,8 +3,8 @@ spring:
     name: tanzu-kotlin-web-app
   datasource:
     driver-class-name: org.postgresql.Driver
-    username: postgres
-    url: jdbc:postgresql://postgres:30666/postgres
+    username: admin
+    url: jdbc:postgresql://postgres:5432/postgresdb
     password: 'test123'
   jpa:
     hibernate:
