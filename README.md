@@ -1,4 +1,4 @@
-# tanzu-java-web-app
+# tanzu-kotlin-web-app
 
 This is a sample of a Java Spring app that works with Tilt and the Tanzu Application Platform.
 
@@ -27,7 +27,7 @@ You can hit the spacebar to open the UI in a browser.
     ```
 
 ```
-tanzu apps workload create tanzu-java-web-app \
+tanzu apps workload create tanzu-kotlin-web-app \
 --git-repo https://github.com/liviu-florin-ilie/tanzu-java-web-app \
 --git-branch main \
 --type web \

@@ -1,4 +1,4 @@
-package com.example.springboot;
+package com.tietoevry.survey;
 
 import org.springframework.boot.CommandLineRunner
 import org.springframework.boot.actuate.trace.http.HttpTraceRepository

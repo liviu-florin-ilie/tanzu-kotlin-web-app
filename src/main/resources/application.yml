@@ -1,11 +1,22 @@
 spring:
   application:
-    name: tanzu-java-web-app
+    name: tanzu-kotlin-web-app
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    username: postgres
+    url: jdbc:postgresql://localhost:51373/survey
+    password: 'test123'
+  jpa:
+    hibernate:
+      ddl-auto: update
 management:
   endpoints:
     web:
       exposure:
-        include: "*"  
+        include: "*"
   endpoint:
     health:
       show-details: always
+
+
+

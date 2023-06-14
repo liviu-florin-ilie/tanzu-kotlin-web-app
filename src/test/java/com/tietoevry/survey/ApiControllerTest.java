@@ -1,4 +1,4 @@
-package com.example.springboot;
+package com.tietoevry.survey;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,22 +10,22 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
-@WebMvcTest(HelloController.class)
-class HelloControllerTest {
+@WebMvcTest(ApiController.class)
+class ApiControllerTest {
 
     @Autowired
-    private HelloController controller;
+    private ApiController controller;
 
     @Autowired
     private MockMvc mockMvc;
 
     @Test
     void index() throws Exception {
-        assertEquals("Greetings from Spring Boot + Tanzu!", controller.index());
+        assertEquals("Greetings from Spring Kotlin Boot + Tanzu!", controller.index());
 
         mockMvc
             .perform(get("/"))
             .andExpect(status().isOk())
-            .andExpect(content().string("Greetings from Spring Boot + Tanzu!"));
+            .andExpect(content().string("Greetings from Spring Kotlin Boot + Tanzu!"));
     }
 }

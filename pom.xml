@@ -8,17 +8,17 @@
         <version>2.7.4</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.example</groupId>
-    <artifactId>demo</artifactId>
+    <groupId>com.tietoevry.survey</groupId>
+    <artifactId>survey-backend</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>demo</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>
-        <java.version>8</java.version>
+        <java.version>17</java.version>
         <snakeyaml.version>1.32</snakeyaml.version>
-        <kotlin.version>1.8.21</kotlin.version>
-        <start-class>com.example.springboot.Application</start-class>
+        <kotlin.version>1.8.22</kotlin.version>
+        <start-class>com.tietoevry.survey.Application</start-class>
     </properties>
 
 
@@ -46,6 +46,22 @@
             <scope>test</scope>
         </dependency>
 
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.flywaydb</groupId>
+            <artifactId>flyway-core</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <scope>runtime</scope>
+        </dependency>
+
         <!-- live reload -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -63,12 +79,6 @@
             <version>${kotlin.version}</version>
             <scope>test</scope>
         </dependency>
-        <dependency>
-            <groupId>org.jetbrains.kotlin</groupId>
-            <artifactId>kotlin-stdlib-jdk8</artifactId>
-            <version>${kotlin.version}</version>
-        </dependency>
-
     </dependencies>
 
     <build>
@@ -79,7 +89,7 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
                     <excludeDevtools>false</excludeDevtools>
-                    <mainClass>com.example.springboot.Application</mainClass>
+                    <mainClass>com.tietoevry.survey.Application</mainClass>
                 </configuration>
                 <executions>
                     <execution>

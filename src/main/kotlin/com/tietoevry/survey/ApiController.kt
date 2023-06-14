@@ -1,10 +1,10 @@
-package com.example.springboot;
+package com.tietoevry.survey;
 
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @RestController
-class HelloController {
+class ApiController {
 
     @RequestMapping("/")
     fun index(): String {
